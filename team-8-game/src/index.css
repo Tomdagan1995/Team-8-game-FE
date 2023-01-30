@@ -23,11 +23,11 @@ body {
 }
 
 .t-cell-0 {
-    background-color: black;
+    background-color: purple;
 }
 
 .t-cell-1 {
-    background-color: #00d;
+    background-color: orange;
     border-bottom: 1px solid #00f;
     border-right: 1px solid #00f;
     border-top: 1px solid #00b;

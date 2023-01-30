@@ -8,7 +8,7 @@ const SHAPES = [
         ],
         width: 2,
         height: 2,
-        rotate: false
+        rotate: false,
     },
     {
         shape: [
@@ -29,6 +29,16 @@ const SHAPES = [
         ],
         width: 1,
         height: 3
+    },
+    {
+        shape: [
+            {x:1, y:1},
+            {x:2, y:0},
+            {x:1, y:0},
+            {x:0, y:0}
+        ],
+        width: 3,
+        height: 1
     }
 ];
 
