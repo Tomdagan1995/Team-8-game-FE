@@ -43,6 +43,18 @@ const SHAPES = [
         width: 3,
         height: 1
     },
+    {
+            shape: [
+                {x:1, y:1},
+                {x:0, y:0},
+                {x:1, y:0},
+                {x:0, y:-1}
+            ],
+            width: 2,
+            height: 4,
+            rotate: false,
+            className: 'shape1'
+        }
   
 ];
 
