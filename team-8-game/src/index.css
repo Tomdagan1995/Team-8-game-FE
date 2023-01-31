@@ -34,7 +34,7 @@ h1{
 .t-cell-1 {
     background-color: orange;
     border-bottom: 1px solid #00f;
-    border-right: 1px solid #00f;
+    border-right: 1px solid #00f; 
     border-top: 1px solid #00b;
     border-left: 1px solid #00b;
 }
@@ -67,4 +67,8 @@ background-color: greenyellow !important;
 
 .shape1{
     background-color: aqua !important;
+}
+
+.restartButton {
+    margin-left: 10em;
 }

@@ -42,7 +42,8 @@ const SHAPES = [
         ],
         width: 3,
         height: 1
-    }
+    },
+  
 ];
 
 export function randomShape() {

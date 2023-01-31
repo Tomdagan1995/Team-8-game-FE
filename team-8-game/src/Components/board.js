@@ -20,6 +20,7 @@ const Board = () => {
             <div>
                 <span className="t-score-label">Score:</span>
                 <span className="t-score-label">{score.toLocaleString()}</span>
+                <span className='restartButton'><button onClick={() => window.location.reload()}>Restart</button></span>
             </div>
             {display.map( (row, index) => <Row row={row} key={index}/>)}
         </div>
@@ -37,7 +38,6 @@ const Row = memo( props => {
 
 const Cell = memo( props => {
     const count = useRef(0);
-
     count.current++;
 
     const value = props.cell ? props.cell : 0;

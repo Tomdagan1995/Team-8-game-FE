@@ -48,10 +48,23 @@ export function useBoard() {
     mergeIntoStage(scene, shape, position)
   );
   const [score, setScore] = useState(0);
-
+  let speed = 500
+function Speed () {
+    if (score > 3000) {
+        speed = 200
+    }
+    if (score > 5000) {
+        speed = 100
+    }
+    if (score > 10000) {
+        speed = 50
+    }
+    
+}
+Speed()
   useEffect(updateDisplay, [scene, shape, position]);
   useEffect(removeFullLines, [scene]);
-  useInterval(tick, 500);
+  useInterval(tick, speed) ;
 
   function updateDisplay() {
     const newDisplay = mergeIntoStage(scene, shape, position);
@@ -137,7 +150,6 @@ export function useBoard() {
   }
 
   function onKeyDown(event) {
-console.log(event)
     switch (event.key) {
       case "ArrowRight":
         movePosition(1, 0);
@@ -160,7 +172,6 @@ console.log(event)
         movePosition(0,10);
         event.preventDefault();
         break;
-        
       default:
         break;
     }
