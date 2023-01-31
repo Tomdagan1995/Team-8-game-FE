@@ -8,6 +8,7 @@ import TopBar from './TopBar/TopBar';
 import SignUp from './menu/modules/SignUp';
 import Login from './menu/modules/LogIn';
 import Game from './Game';
+import GameTal from "./components/GameTal";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Game />}>
         </Route>
-        <Route path="/profile" element={<Profile />}>
+        <Route path="/profile" element={<GameTal />}>
         </Route>
         <Route path="/signup" element={<SignUp />}>
         </Route>
