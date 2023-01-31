@@ -26,6 +26,10 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter >
+
+/* <div className="App">
+<Game rows={20} columns={10} />
+</div> */
   );
 }
 
