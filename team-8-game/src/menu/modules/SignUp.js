@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from "react-router-dom";
+import { httpCall } from "../../httpCall";
 
 
 export default function SignUp() {
@@ -14,6 +15,10 @@ export default function SignUp() {
     const [confirm, setConfirm] = useState("");
     const navigate = useNavigate();
 
+    const register = async (e) => {
+        e.preventDefault()
+        await httpCall("signup", { firstName, lastName, nickname, email, password, confirm });
+    }
 
 
     return (
@@ -50,7 +55,7 @@ export default function SignUp() {
                 <Form.Control type="password" placeholder="ConfirmPassword" value={confirm} onChange={(e) => setConfirm(e.target.value)} />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" onClick={register}>
                 Submit
             </Button>
         </Form>

@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { httpCall } from "../../httpCall";
 
 export default function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const login = async (e) => {
+        e.preventDefault()
+        await httpCall("login", { email, password });
+    }
 
     return (
         <Form className="container">
@@ -22,7 +27,7 @@ export default function Login() {
                 <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" onClick={login}>
                 Submit
             </Button>
         </Form>
