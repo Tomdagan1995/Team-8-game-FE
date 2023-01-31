@@ -2,7 +2,7 @@ body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 0px;
 }
-h1{
+h1,h2,h3{
     text-align: center;
     align-items: center;
     
@@ -70,5 +70,5 @@ background-color: greenyellow !important;
 }
 
 .restartButton {
-    margin-left: 10em;
+    margin-left: 5.5em;
 }

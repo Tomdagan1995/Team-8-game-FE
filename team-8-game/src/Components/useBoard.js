@@ -48,7 +48,9 @@ export function useBoard() {
     mergeIntoStage(scene, shape, position)
   );
   const [score, setScore] = useState(0);
+  const [level, setLevel] = useState("level 1")
   let speed = 500
+
 function Speed () {
     if (score > 3000) {
         speed = 200
@@ -57,11 +59,35 @@ function Speed () {
         speed = 100
     }
     if (score > 10000) {
-        speed = 50
-    }
+        speed = 75
+    }   
+    if (score > 15000) {
+      speed = 50
+  }   
     
 }
 Speed()
+
+useEffect(() => {
+function whatLevel() {
+  if (score > 3000) {
+    setLevel("level 2")
+}
+if (score > 5000) {
+   
+    setLevel("level 3")
+}
+if (score > 10000) {
+  setLevel("level 4")
+} 
+if (score > 15000) {
+  setLevel("level 5")
+}   
+}
+whatLevel()
+},)
+
+
   useEffect(updateDisplay, [scene, shape, position]);
   useEffect(removeFullLines, [scene]);
   useInterval(tick, speed) ;
@@ -193,7 +219,6 @@ Speed()
     return shape.shape.every((point) => {
       const tX = point.x + position.x;
       const tY = point.y + position.y;
-
       if (tX < 0 || tX >= COLUMN_COUNT) {
         return false;
       }
@@ -210,5 +235,5 @@ Speed()
     });
   }
 
-  return [display, score, onKeyDown];
+  return [display, score, onKeyDown, level];
 }

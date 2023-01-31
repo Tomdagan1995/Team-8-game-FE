@@ -3,8 +3,9 @@ import {useBoard} from "./useBoard.js";
 
 const Board = () => {
 
-    const [display, score, onKeyDown] = useBoard();
+    const [display, score, onKeyDown, level] = useBoard();
     const eBoard = useRef();
+    const user = "Fake User"
 
     useEffect(focusBoard, []);
 
@@ -13,16 +14,17 @@ const Board = () => {
     }
 
     return (
-        
         <>
-         <h1>Tetris</h1>
+         <h1>Hello {user} Welcome to Tetris by Team 8</h1>
+        <h3>Up Arrow will change the direction of the Shape, SpaceBar will drop the Shape 10 squares.</h3>
         <div  ref={eBoard} className={'t-board'} tabIndex={0} onKeyDown={ onKeyDown }>
             <div>
                 <span className="t-score-label">Score:</span>
                 <span className="t-score-label">{score.toLocaleString()}</span>
-                <span className='restartButton'><button onClick={() => window.location.reload()}>Restart</button></span>
+                <span className='restartButton'><button onClick={() => window.location.reload()}>Restart</button><button>Save Score</button></span>
             </div>
             {display.map( (row, index) => <Row row={row} key={index}/>)}
+            <span> {level}</span>
         </div>
         </>
     );
