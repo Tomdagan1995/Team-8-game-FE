@@ -1,13 +1,75 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 0px;
+  background-color: beige;
+}
+h1,h2,h3{
+  text-align: center;
+  align-items: center;
+  
+}
+.t-row {
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.t-board {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid grey;
+  margin-left: 42em;
+}
+
+.t-cell {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  color: grey;
+}
+
+.t-cell-0 {
+  background-image:url(https://media.istockphoto.com/id/971578384/photo/night-sky-with-stars-and-soft-milky-way-universe-as-background-or-texture.jpg?b=1&s=612x612&w=0&k=20&c=6Vx51jpJL4XMqZ9TA1wNdVyz92H4BpyKNeEzGQyhcag=)
+}
+
+.t-cell-1 {
+  background-color:aquamarine;
+  border-bottom: 1px solid #00f;
+  border-right: 1px solid #00f; 
+  border-top: 1px solid #00b;
+  border-left: 1px solid #00b;
+}
+
+.t-cell-2 {
+  background-color: green;
+}
+
+.t-cell-3 {
+  background-color: red;
+}
+
+.t-score-label {
+  font-weight: bold;
+}
+
+.t-score-label {
+  font-weight: bold;
+}
+
+
+element.style {
+  width: 44px;
+  left: 0px;
+}
+
+.shape3{
+background-color: greenyellow !important;
+}
+
+.shape1{
+  background-color: aqua !important;
+}
+
+.restartButton {
+  margin-left: 5.5em;
 }

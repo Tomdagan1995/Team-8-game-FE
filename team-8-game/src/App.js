@@ -7,7 +7,7 @@ import Profile from './profile/Profile';
 import TopBar from './TopBar/TopBar';
 import SignUp from './menu/modules/SignUp';
 import Login from './menu/modules/LogIn';
-
+import Game from './Game';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <TopBar />
       <Routes>
-        <Route path="/" element={<Home />}>
+        <Route path="/" element={<Game />}>
         </Route>
         <Route path="/profile" element={<Profile />}>
         </Route>
