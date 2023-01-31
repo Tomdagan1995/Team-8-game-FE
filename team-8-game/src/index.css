@@ -2,7 +2,11 @@ body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 0px;
 }
-
+h1{
+    text-align: center;
+    align-items: center;
+    
+}
 .t-row {
     display: flex;
 }
@@ -12,6 +16,7 @@ body {
     margin: 20px;
     padding: 20px;
     border: 1px solid grey;
+    margin-left: 42em;
 }
 
 .t-cell {
@@ -50,11 +55,16 @@ body {
     font-weight: bold;
 }
 
-.t-parent {
-    display: flex;
-}
 
 element.style {
     width: 44px;
     left: 0px;
+}
+
+.shape3{
+background-color: greenyellow !important;
+}
+
+.shape1{
+    background-color: aqua !important;
 }

@@ -9,6 +9,7 @@ const SHAPES = [
         width: 2,
         height: 2,
         rotate: false,
+        className: 'shape1'
     },
     {
         shape: [
@@ -18,7 +19,8 @@ const SHAPES = [
             {x:0, y:3}
         ],
         width: 1,
-        height: 4
+        height: 4,
+        className: "shape2"
     },
     {
         shape: [
@@ -28,7 +30,8 @@ const SHAPES = [
             {x:1, y:2}
         ],
         width: 1,
-        height: 3
+        height: 3,
+        className: "shape3"
     },
     {
         shape: [
