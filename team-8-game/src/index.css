@@ -1,8 +1,18 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 0px;
-  background-color: beige;
+  background-color: #406 !important;
+  color: aliceblue !important;
 }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ 
+
 h1,h2,h3{
   text-align: center;
   align-items: center;

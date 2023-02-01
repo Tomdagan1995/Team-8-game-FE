@@ -5,8 +5,8 @@
   }
   
   .GameStats__right {
-    right: 0;
-    bottom: 0;
+    left: 25em;
+    bottom: 10em;
     text-align: left;
   }
   

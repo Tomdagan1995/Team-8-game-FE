@@ -21,10 +21,10 @@ const Board = () => {
             <div>
                 <span className="t-score-label">Score:</span>
                 <span className="t-score-label">{score.toLocaleString()}</span>
-                <span className='restartButton'><button onClick={() => window.location.reload()}>Restart</button><button>Save Score</button></span>
+                <span className='restartButton'><button className="btn btn-primary" onClick={() => window.location.reload()}>Restart</button></span>
             </div>
             {display.map( (row, index) => <Row row={row} key={index}/>)}
-            <span> {level}</span>
+            <span> {level}</span><span><button className="btn btn-primary">Save Score</button></span>
         </div>
         </>
     );
