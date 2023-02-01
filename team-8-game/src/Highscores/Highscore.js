@@ -8,7 +8,7 @@ const [highScores, setHighScores] = useState([])
    
 useEffect(() => {
 axios.get(`http://localhost:8080/scores`).then(res => setHighScores(res.data.data))
-    },)
+    },[])
     console.log(highScores)
 
     return (
@@ -16,6 +16,7 @@ axios.get(`http://localhost:8080/scores`).then(res => setHighScores(res.data.dat
         <>
         <h3>High Scores Light Version</h3>
         <div  className="User"> 
+        
             {highScores.map(item => ( <Table key={item.id} variant="secondary">
           <thead>
             <tr>

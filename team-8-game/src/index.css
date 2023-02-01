@@ -14,6 +14,7 @@ body {
  
 
 h1,h2,h3{
+  margin-top: 1em !important;
   text-align: center;
   align-items: center;
   
@@ -91,15 +92,22 @@ background-color: greenyellow !important;
 .containersignup{
   width: 500px;
   height: 500px;
-  margin-left: 35em;
+  margin-left: 33em;
   margin-top: 5em;
 }
 .containerlogin{
   width: 500px;
   height: 500px;
-  margin-left: 35em;
+  margin-left: 33em;
   margin-top: 5em;
 }
 .me-auto{
   margin-left: 40em;
+}
+table.table-secondary{
+  text-align: center;
+  margin-top: 2em;
+  margin-left: 38em;
+  width: 20vw;
+  height: 10vh;
 }

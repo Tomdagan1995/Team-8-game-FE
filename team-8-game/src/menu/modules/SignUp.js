@@ -24,6 +24,8 @@ export default function SignUp() {
 
    
     return (
+        <>
+       <h1> Sign Up</h1>
         <Form className="containersignup">
             <Col xs="auto">
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -53,6 +55,7 @@ export default function SignUp() {
             </Button>
             </Col>
         </Form>
+        </>
 
     )
 }

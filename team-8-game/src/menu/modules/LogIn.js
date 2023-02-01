@@ -23,6 +23,8 @@ const {setUser,  setToken, userEmail, setUserEmail} = useContext(appContext)
     }
 
     return (
+        <>
+        <h1>Log In</h1>
         <Form className="containerlogin">
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address:</Form.Label>
@@ -40,5 +42,6 @@ const {setUser,  setToken, userEmail, setUserEmail} = useContext(appContext)
                Log In
             </Button>
         </Form>
+        </>
     )
 }

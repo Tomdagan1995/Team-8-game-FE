@@ -26,7 +26,6 @@ const Board = () => {
             <div>
                 <span className="t-score-label">Score: </span>
                 <span className="t-score-label">{score.toLocaleString()}</span>
-                <span><button className="btn btn-primary" onClick={() => window.location.reload()}>Restart</button></span>
             </div>
             {display.map( (row, index) => <Row row={row} key={index}/>)}
             <span className="t-score-label"> {level}</span><span><button onClick={sendScore} className="btn btn-primary">Save Score</button></span>
