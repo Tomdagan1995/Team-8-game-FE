@@ -20,7 +20,7 @@ export default function SignUp() {
         await httpCall("signup", { firstName, lastName, nickname, email, password, confirm });
     }
 
-
+   
     return (
         <Form className="container">
             <Form.Group className="mb-3" controlId="formBasicEmail">
