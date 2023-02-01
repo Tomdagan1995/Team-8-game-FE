@@ -20,7 +20,7 @@ export default function Highscores() {
 
   return (
     <>
-      <h3>High Scores Light Version</h3>
+      <h3>Light Highscores</h3>
       <div className="highscore-tables">
         <div className="lightscore-box">
           {lightHighScores.map((item) => (
@@ -41,7 +41,7 @@ export default function Highscores() {
           ))}
         </div>
       </div>
-      <h3>Main Higscores</h3>
+      <h3>Main Highscores</h3>
       <div className="mainscore-box">
           {mainHighScores.map((item) => (
             <Table key={item.id} variant="secondary">
