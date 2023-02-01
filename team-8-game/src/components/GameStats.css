@@ -5,8 +5,8 @@
   }
   
   .GameStats__right {
-    left: 25vw;
-    bottom: 70vh;
+    left: 20vw;
+    bottom: 85vh;
     text-align: left;
   }
   
@@ -20,5 +20,5 @@
   .GameStats .value {
     font-size: 2.8rem;
     margin-bottom: 0.5em;
-    color: rgba(255, 255, 255, 1);
+    color: rgb(7, 43, 3);
   }
