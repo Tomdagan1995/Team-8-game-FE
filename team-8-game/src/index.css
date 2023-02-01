@@ -1,8 +1,8 @@
 body {
   font-family: 14px fantasy;
   margin: 0px;
-  background-color: rgb(73, 101, 101) !important;
-  color: aliceblue !important;
+  background-color: rgb(71, 152, 152) !important;
+  color: rgb(68, 159, 113) !important;
   background-image: url("./image/tetris-background\ \(1\).png");
   height: 500px; /* set the height of the element */
   width: 100%; /* set the width of the element to 100% of its container */
@@ -65,6 +65,15 @@ h3 {
   border-left: 1px solid #00b;
 }
 
+.GameStats,
+.value,
+li {
+  font-family: fantasy;
+  color: rgb(15, 38, 27);
+  font-size: 30px;
+  width: 30vw;
+}
+
 .t-cell-2 {
   background-color: green;
 }
@@ -95,12 +104,14 @@ element.style {
 }
 
 .btn {
-  margin-left: 8vw;
+  margin-left: 2vw;
+  margin-top: 1vw;
+  background-color: rgb(49, 96, 73);
+  border: 1px rgb(49, 96, 73);
 }
 
 .home-buttons {
-  margin-top: 15vh;
-  margin-left: 30vw;
+  margin: 10vw 40vw;
 }
 .containersignup {
   width: 500px;
