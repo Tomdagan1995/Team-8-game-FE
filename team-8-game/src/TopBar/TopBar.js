@@ -28,8 +28,11 @@ export default function TopBar() {
                         <LinkContainer to="/login">
                             <Nav.Link>LogIn</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/profile">
-                            <Nav.Link>Profile</Nav.Link>
+                        <LinkContainer to="/ColoredGame">
+                            <Nav.Link>Game</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/LightGame">
+                            <Nav.Link>Light Game</Nav.Link>
                         </LinkContainer>
                         <Nav.Link onClick={onLogout}>Logout</Nav.Link>
                     </Nav>

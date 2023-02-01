@@ -9,6 +9,7 @@ import SignUp from './menu/modules/SignUp';
 import Login from './menu/modules/LogIn';
 import Game from './Game';
 import GameTal from "./components/GameTal";
+import GameButton from './gameButton/gameButton';
 
 
 function App() {
@@ -16,9 +17,11 @@ function App() {
     <BrowserRouter>
       <TopBar />
       <Routes>
-        <Route path="/" element={<Game />}>
+        <Route path="/" element={<GameButton />}>
         </Route>
-        <Route path="/profile" element={<GameTal rows={20} columns={10} />}>
+        <Route path="/ColoredGame" element={<GameTal rows={20} columns={10} />}>
+        </Route>
+        <Route path="/LightGame" element={<Game />}>
         </Route>
         <Route path="/signup" element={<SignUp />}>
         </Route>
