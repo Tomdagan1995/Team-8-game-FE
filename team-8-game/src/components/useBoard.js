@@ -1,11 +1,10 @@
-import { useEffect, useState,useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useInterval } from "./useInterval.js";
 import { randomShape } from "./shapeFactory";
 import { appContext } from "../appContext.js";
 
 export const ROW_COUNT = 20;
 export const COLUMN_COUNT = 10;
-
 
 function copyScene(scene) {
   return scene.map((row) => row.slice());
@@ -43,7 +42,7 @@ function createEmptyScene() {
 }
 
 export function useBoard() {
-  const {userScore, setUserScore} = useContext(appContext);
+  const { userScore, setUserScore } = useContext(appContext);
   const [scene, setScene] = useState(() => createEmptyScene());
   const [shape, setShape] = useState(() => randomShape());
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -51,49 +50,46 @@ export function useBoard() {
     mergeIntoStage(scene, shape, position)
   );
   const [score, setScore] = useState(0);
-  const [level, setLevel] = useState("level 1")
-  let speed = 500
+  const [level, setLevel] = useState("Level 1");
+  let speed = 500;
 
-function Speed () {
+  function Speed() {
     if (score > 3000) {
-        speed = 200
+      speed = 200;
     }
     if (score > 5000) {
-        speed = 100
+      speed = 100;
     }
     if (score > 10000) {
-        speed = 75
-    }   
+      speed = 75;
+    }
     if (score > 15000) {
-      speed = 50
-  }   
-    
-}
-Speed()
+      speed = 50;
+    }
+  }
+  Speed();
 
-useEffect(() => {
-function whatLevel() {
-  if (score > 3000) {
-    setLevel("level 2")
-}
-if (score > 5000) {
-   
-    setLevel("level 3")
-}
-if (score > 10000) {
-  setLevel("level 4")
-} 
-if (score > 15000) {
-  setLevel("level 5")
-}   
-}
-whatLevel()
-},)
-
+  useEffect(() => {
+    function whatLevel() {
+      if (score > 3000) {
+        setLevel("Level 2");
+      }
+      if (score > 5000) {
+        setLevel("Level 3");
+      }
+      if (score > 10000) {
+        setLevel("Level 4");
+      }
+      if (score > 15000) {
+        setLevel("Level 5");
+      }
+    }
+    whatLevel();
+  });
 
   useEffect(updateDisplay, [scene, shape, position]);
   useEffect(removeFullLines, [scene]);
-  useInterval(tick, speed) ;
+  useInterval(tick, speed);
 
   function updateDisplay() {
     const newDisplay = mergeIntoStage(scene, shape, position);
@@ -197,9 +193,9 @@ whatLevel()
         rotateShape();
         event.preventDefault();
         break;
-        case " ":
-        console.log(event.key)
-        movePosition(0,10);
+      case " ":
+        console.log(event.key);
+        movePosition(0, 10);
         event.preventDefault();
         break;
       default:
