@@ -19,6 +19,9 @@ export default function TopBar() {
                 <LinkContainer to="/">
                     <Navbar.Brand>Welcome to Tetris By Team 8</Navbar.Brand>
                 </LinkContainer>
+                <LinkContainer to="/highscores">
+                            <Nav.Link>High Scores</Nav.Link>
+                        </LinkContainer>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

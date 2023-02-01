@@ -1,9 +1,8 @@
 import React, {useContext } from 'react';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Home/Home';
+import Highscore from './Highscores/Highscore';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Profile from './profile/Profile';
 import TopBar from './TopBar/TopBar';
 import SignUp from './menu/modules/SignUp';
 import Login from './menu/modules/LogIn';
@@ -43,6 +42,8 @@ function App() {
         <Route path="/signup" element={<SignUp />}>
         </Route>
         <Route path="/login" element={<Login />}>
+        </Route>
+        <Route path="/highscores" element={<Highscore />}>
         </Route>
       </Routes>
     </BrowserRouter >
