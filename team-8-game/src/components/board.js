@@ -16,9 +16,10 @@ const Board = () => {
         eBoard.current.focus();
     }
 
-    const sendScore = (e) => {
+    function sendScore(e) {
         e.preventDefault()
-        axios.post(`http://localhost:8080/scores`, {user,score});}
+        axios.post(`http://localhost:8080/scores/Light`, {user,score});
+        alert("Score Saved") }
 
     return (
         <>

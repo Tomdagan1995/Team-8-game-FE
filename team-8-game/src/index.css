@@ -14,7 +14,7 @@ body {
  
 
 h1,h2,h3{
-  margin-top: 1em !important;
+  margin-top: 2vh !important;
   text-align: center;
   align-items: center;
   
@@ -26,15 +26,15 @@ h1,h2,h3{
 .t-board {
   display: inline-block;
   margin: 10px;
-  padding: 20px;
-  border: 1px solid grey;
-  margin-left: 36em;
+  padding: 10px;
+  border: 1px solid black;
+  margin-left: 36vw;
 }
 
 .t-cell {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   box-sizing: border-box;
   color: grey;
 }
@@ -82,27 +82,32 @@ background-color: greenyellow !important;
 }
 
 .btn {
-  margin-left: 8em;
+  margin-left: 8vw;
 }
 
 .home-buttons{
-  margin-top: 15em;
-  margin-left: 30em;
+  margin-top: 15vh;
+  margin-left: 30vw;
 }
 .containersignup{
   width: 500px;
   height: 500px;
-  margin-left: 33em;
-  margin-top: 5em;
+  margin-left: 33vw;
+  margin-top: 5vh;
 }
 .containerlogin{
   width: 500px;
   height: 500px;
-  margin-left: 33em;
-  margin-top: 5em;
+  margin-left: 33vw;
+  margin-top: 5vh;
 }
 .me-auto{
-  margin-left: 40em;
+  margin-left: 40vw;
+}
+.table-secondary{
+  --bs-table-bg: rgb(97, 7, 145) !important;
+  font: bold;
+  color: white !important;
 }
 table.table-secondary{
   text-align: center;
@@ -111,3 +116,23 @@ table.table-secondary{
   width: 20vw;
   height: 10vh;
 }
+.highscore-tables{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+.lightscore-box{
+display: flex;
+flex-direction: column;
+width: 50vw;
+height: 50vh;
+}
+.mainscore-box{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 50vh;
+  }
