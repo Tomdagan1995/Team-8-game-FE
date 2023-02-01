@@ -15,17 +15,17 @@ const Board = () => {
 
     return (
         <>
-         <h1>Hello {user} Welcome to Tetris by Team 8</h1>
-        <h3>Up Arrow will change the direction of the Shape, SpaceBar will drop the Shape 10 squares.</h3>
         <div  ref={eBoard} className={'t-board'} tabIndex={0} onKeyDown={ onKeyDown }>
             <div>
-                <span className="t-score-label">Score:</span>
+                <span className="t-score-label">Score: </span>
                 <span className="t-score-label">{score.toLocaleString()}</span>
-                <span className='restartButton'><button className="btn btn-primary" onClick={() => window.location.reload()}>Restart</button></span>
+                <span><button className="btn btn-primary" onClick={() => window.location.reload()}>Restart</button></span>
             </div>
             {display.map( (row, index) => <Row row={row} key={index}/>)}
-            <span> {level}</span><span><button className="btn btn-primary">Save Score</button></span>
+            <span className="t-score-label"> {level}</span><span><button className="btn btn-primary">Save Score</button></span>
+            
         </div>
+        <h3>Up Arrow will change the direction of the Shape, SpaceBar will drop the Shape 10 squares.</h3>
         </>
     );
 };

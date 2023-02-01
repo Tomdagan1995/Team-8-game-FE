@@ -15,7 +15,7 @@ export default function SignUp() {
     const navigate = useNavigate();
 
 
-
+   
     return (
         <Form className="container">
             <Form.Group className="mb-3" controlId="formBasicEmail">
