@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Game />}>
         </Route>
-        <Route path="/profile" element={<GameTal />}>
+        <Route path="/profile" element={<GameTal rows={20} columns={10} />}>
         </Route>
         <Route path="/signup" element={<SignUp />}>
         </Route>
@@ -27,9 +27,7 @@ function App() {
       </Routes>
     </BrowserRouter >
 
-/* <div className="App">
-<Game rows={20} columns={10} />
-</div> */
+
   );
 }
 
