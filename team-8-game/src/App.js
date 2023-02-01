@@ -1,4 +1,4 @@
-import React, { Profiler } from 'react';
+import React, {useContext } from 'react';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home/Home';
@@ -10,14 +10,31 @@ import Login from './menu/modules/LogIn';
 import Game from './Game';
 import GameTal from "./components/GameTal";
 import GameButton from './gameButton/gameButton';
+import { appContext } from './appContext';
+
 
 
 function App() {
+
+  const {token} = useContext(appContext)
+
+  const ProtectedGameRoute = () => {
+    
+    if (token) {
+      return <GameButton />;
+    } else {
+      return <Login/>;
+    }
+  };
+  
+
+
+
   return (
     <BrowserRouter>
       <TopBar />
       <Routes>
-        <Route path="/" element={<GameButton />}>
+        <Route path="/" element={<ProtectedGameRoute />}>
         </Route>
         <Route path="/ColoredGame" element={<GameTal rows={20} columns={10} />}>
         </Route>

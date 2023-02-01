@@ -14,27 +14,22 @@ export default function TopBar() {
         navigate('/');
     }
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
                 <LinkContainer to="/">
-                    <Navbar.Brand>Welcome to the Game</Navbar.Brand>
+                    <Navbar.Brand>Welcome to Tetris By Team 8</Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <LinkContainer to="/signup">
-                            <Nav.Link>SignUp</Nav.Link>
+                            <Nav.Link>Sign Up</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/login">
-                            <Nav.Link>LogIn</Nav.Link>
+                            <Nav.Link>Log In</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/ColoredGame">
-                            <Nav.Link>Game</Nav.Link>
-                        </LinkContainer>
-                        <LinkContainer to="/LightGame">
-                            <Nav.Link>Light Game</Nav.Link>
-                        </LinkContainer>
-                        <Nav.Link onClick={onLogout}>Logout</Nav.Link>
+                     
+                       
                     </Nav>
                 </Navbar.Collapse>
             </Container>

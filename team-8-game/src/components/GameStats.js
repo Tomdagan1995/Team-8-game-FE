@@ -14,6 +14,8 @@ const GameStats = ({ gameStats }) => {
       <li className="value">{linesToLevel}</li>
       <li>Points</li>
       <li className="value">{points}</li>
+      <li>Press P to Pause</li>
+      <li>Press Q to Restart</li>
     </ul>
   );
 };

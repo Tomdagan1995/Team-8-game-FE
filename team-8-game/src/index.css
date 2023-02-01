@@ -83,3 +83,23 @@ background-color: greenyellow !important;
 .btn {
   margin-left: 8em;
 }
+
+.home-buttons{
+  margin-top: 15em;
+  margin-left: 30em;
+}
+.containersignup{
+  width: 500px;
+  height: 500px;
+  margin-left: 35em;
+  margin-top: 5em;
+}
+.containerlogin{
+  width: 500px;
+  height: 500px;
+  margin-left: 35em;
+  margin-top: 5em;
+}
+.me-auto{
+  margin-left: 40em;
+}
