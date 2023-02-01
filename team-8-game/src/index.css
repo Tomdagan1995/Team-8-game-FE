@@ -1,23 +1,37 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font-family: 14px fantasy;
   margin: 0px;
-  background-color: #406 !important;
+  background-color: rgb(73, 101, 101) !important;
   color: aliceblue !important;
+  background-image: url("./image/tetris-background\ \(1\).png");
+  height: 500px; /* set the height of the element */
+  width: 100%; /* set the width of the element to 100% of its container */
+  background-size: cover; /* make the image cover the entire element */
 }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
- 
 
-h1,h2,h3{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-bar {
+  font-family: fantasy;
+  font-size: 20px;
+}
+.high-score-headline {
+  color: grey;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
   margin-top: 2vh !important;
   text-align: center;
   align-items: center;
-  
+  font-family: fantasy;
+  color: rgb(27, 62, 45);
 }
 .t-row {
   display: flex;
@@ -40,13 +54,13 @@ h1,h2,h3{
 }
 
 .t-cell-0 {
-  background-image:url(https://media.istockphoto.com/id/971578384/photo/night-sky-with-stars-and-soft-milky-way-universe-as-background-or-texture.jpg?b=1&s=612x612&w=0&k=20&c=6Vx51jpJL4XMqZ9TA1wNdVyz92H4BpyKNeEzGQyhcag=)
+  background-image: url(https://media.istockphoto.com/id/971578384/photo/night-sky-with-stars-and-soft-milky-way-universe-as-background-or-texture.jpg?b=1&s=612x612&w=0&k=20&c=6Vx51jpJL4XMqZ9TA1wNdVyz92H4BpyKNeEzGQyhcag=);
 }
 
 .t-cell-1 {
-  background-color:aquamarine;
+  background-color: aquamarine;
   border-bottom: 1px solid #00f;
-  border-right: 1px solid #00f; 
+  border-right: 1px solid #00f;
   border-top: 1px solid #00b;
   border-left: 1px solid #00b;
 }
@@ -67,17 +81,16 @@ h1,h2,h3{
   font-weight: bold;
 }
 
-
 element.style {
   width: 44px;
   left: 0px;
 }
 
-.shape3{
-background-color: greenyellow !important;
+.shape3 {
+  background-color: greenyellow !important;
 }
 
-.shape1{
+.shape1 {
   background-color: aqua !important;
 }
 
@@ -85,34 +98,48 @@ background-color: greenyellow !important;
   margin-left: 8vw;
 }
 
-.home-buttons{
+.home-buttons {
   margin-top: 15vh;
   margin-left: 30vw;
 }
-.containersignup{
+.containersignup {
   width: 500px;
   height: 500px;
   margin-left: 33vw;
   margin-top: 5vh;
 }
-.containerlogin{
+.containerlogin {
   width: 500px;
   height: 500px;
   margin-left: 33vw;
   margin-top: 5vh;
 }
-.me-auto{
+.me-auto {
   margin-left: 40vw;
 }
-.table-secondary{
-  --bs-table-bg: rgb(97, 7, 145) !important;
+.table-secondary {
+  --bs-table-bg: #9be5ca !important;
   font: bold;
-  color: white !important;
+  color: rgb(27, 62, 45) !important;
+  border: 3px solid;
+  font-family: fantasy;
 }
-table.table-secondary{
-  text-align: center;
-  margin-top: 2em;
-  margin-left: 38em;
-  width: 20vw;
+
+.Main-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.mainscore-box,
+.lightscore-box {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-content: center;
+  width: 15vw;
   height: 10vh;
+  margin: auto 0;
+  padding-top: 10%;
+  border-radius: 8px;
 }
