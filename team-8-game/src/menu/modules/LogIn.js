@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { appContext } from "../../appContext";
 export default function Login() {
-const {setUser,  setToken} = useContext(appContext)
+const {setUser,  setToken, userEmail, setUserEmail} = useContext(appContext)
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate()
@@ -16,6 +16,7 @@ const {setUser,  setToken} = useContext(appContext)
         if(res.data){
             setUser(res.data.user)
             setToken(res.data.token)
+            setUserEmail(res.data.email)
             navigate('/')
 
         }
@@ -36,7 +37,7 @@ const {setUser,  setToken} = useContext(appContext)
             </Form.Group>
 
             <Button className="loginbutton" variant="primary" type="submit" onClick={login}>
-               Login
+               Log In
             </Button>
         </Form>
     )

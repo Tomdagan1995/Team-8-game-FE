@@ -50,7 +50,7 @@ export default function SignUp() {
             </Form.Group>
 
             <Button variant="primary" type="submit" onClick={register}>
-               Signup
+               Sign up
             </Button>
             </Col>
         </Form>

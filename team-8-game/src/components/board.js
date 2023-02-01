@@ -1,17 +1,24 @@
-import React, { memo, useEffect, useRef } from 'react';
+import React, { memo, useEffect, useRef, useContext} from 'react';
 import {useBoard} from "./useBoard.js";
+import { appContext } from '../appContext.js';
+import axios from 'axios'
 
 const Board = () => {
 
+    const {user} = useContext(appContext)
     const [display, score, onKeyDown, level] = useBoard();
     const eBoard = useRef();
-    const user = "Fake User"
+    
 
     useEffect(focusBoard, []);
 
     function focusBoard() {
         eBoard.current.focus();
     }
+
+    const sendScore = (e) => {
+        e.preventDefault()
+        axios.post(`http://localhost:8080/scores`, {user,score});}
 
     return (
         <>
@@ -22,7 +29,7 @@ const Board = () => {
                 <span><button className="btn btn-primary" onClick={() => window.location.reload()}>Restart</button></span>
             </div>
             {display.map( (row, index) => <Row row={row} key={index}/>)}
-            <span className="t-score-label"> {level}</span><span><button className="btn btn-primary">Save Score</button></span>
+            <span className="t-score-label"> {level}</span><span><button onClick={sendScore} className="btn btn-primary">Save Score</button></span>
             
         </div>
         <h3>Up Arrow will change the direction of the Shape, SpaceBar will drop the Shape 10 squares.</h3>

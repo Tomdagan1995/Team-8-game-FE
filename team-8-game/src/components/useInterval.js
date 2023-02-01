@@ -9,7 +9,7 @@ export function useInterval(callback, delay) {
         callbackRef.current = callback;
     }, [callback]);
 
-    console.log(delay)
+   
 
     useEffect( ()=> {
         const interval = setInterval(()=> callbackRef.current(), delay);

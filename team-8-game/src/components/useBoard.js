@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import { useInterval } from "./useInterval.js";
 import { randomShape } from "./shapeFactory";
+import { appContext } from "../appContext.js";
 
 export const ROW_COUNT = 20;
 export const COLUMN_COUNT = 10;
+
 
 function copyScene(scene) {
   return scene.map((row) => row.slice());
@@ -41,6 +43,7 @@ function createEmptyScene() {
 }
 
 export function useBoard() {
+  const {userScore, setUserScore} = useContext(appContext);
   const [scene, setScene] = useState(() => createEmptyScene());
   const [shape, setShape] = useState(() => randomShape());
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -154,6 +157,7 @@ whatLevel()
       }
 
       touched = true;
+      setUserScore((oldVal) => oldVal + 1000);
       setScore((oldVal) => oldVal + 1000);
     };
 
