@@ -1,5 +1,5 @@
 import React, { Profiler } from 'react';
-import './App.css';
+import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Game />}>
         </Route>
-        <Route path="/profile" element={<GameTal />}>
+        <Route path="/profile" element={<GameTal rows={20} columns={10} />}>
         </Route>
         <Route path="/signup" element={<SignUp />}>
         </Route>
@@ -26,6 +26,8 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter >
+
+
   );
 }
 
