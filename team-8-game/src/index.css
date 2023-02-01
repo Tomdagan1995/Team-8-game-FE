@@ -116,23 +116,3 @@ table.table-secondary{
   width: 20vw;
   height: 10vh;
 }
-.highscore-tables{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: space-between;
-  width: 100vw;
-  height: 100vh;
-}
-.lightscore-box{
-display: flex;
-flex-direction: column;
-width: 50vw;
-height: 50vh;
-}
-.mainscore-box{
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  height: 50vh;
-  }

@@ -40,7 +40,9 @@ export default function Highscores() {
             </Table>
           ))}
         </div>
-        <div className="mainscore-box">
+      </div>
+      <h3>Main Higscores</h3>
+      <div className="mainscore-box">
           {mainHighScores.map((item) => (
             <Table key={item.id} variant="secondary">
               <thead>
@@ -58,7 +60,6 @@ export default function Highscores() {
             </Table>
           ))}
         </div>
-      </div>
     </>
   );
 }
